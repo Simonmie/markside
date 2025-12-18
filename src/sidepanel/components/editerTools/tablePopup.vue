@@ -30,6 +30,8 @@ const handleMouseOver = (row, col) => {
 }
 
 const handleSelect = (row, col) => {
+  // Trigger table insertion in editor with selected dimensions
+  // This will fire the 'insertTable' command in EditorToolbar which handles the Tiptap rendering
   emit('select', { rows: row, cols: col })
 }
 </script>

@@ -21,7 +21,7 @@
 
 h1 {
   margin: 0 0 10px;
-  color: #42b883;
+  color: #7DC5EB;
   font-size: 24px;
 }
 

@@ -10,19 +10,13 @@
       <!-- 抽屉内容 -->
     </div>
     <!-- 底部快捷方式 -->
-    <div class="editor-footer">
-      <button class="icon-btn" @click="isSettingsOpen = true" title="设置">
-        <SettingsIcon size="20" />
-      </button>
-    </div>
-    <SettingsDialog v-model:isOpen="isSettingsOpen" v-model="currentTheme" />
+    <SidePanelFooter v-model="currentTheme" />
   </div>
 </template>
 
 <script setup>
 import { onBeforeUnmount, ref, watch, onMounted } from 'vue'
-import { Settings as SettingsIcon } from 'lucide-vue-next'
-import SettingsDialog from './components/SettingsDialog.vue'
+import SidePanelFooter from './components/SidePanelFooter.vue'
 import TipTapEditer from './components/TipTapEditer.vue'
 
 defineOptions({
@@ -30,7 +24,6 @@ defineOptions({
 })
 
 const editorRef = ref(null)
-const isSettingsOpen = ref(false)
 const currentTheme = ref(localStorage.getItem('theme') || 'system')
 
 // Theme management
@@ -79,12 +72,6 @@ onBeforeUnmount(() => {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  .editor-footer {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-  }
 }
 
 .main-edit-area {

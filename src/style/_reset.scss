@@ -20,6 +20,12 @@ ul, ol {
   list-style: none;
 }
 
+/* Re-enable list styles for Tiptap editor content */
+.ProseMirror ul, 
+.ProseMirror ol {
+  list-style: revert;
+}
+
 a {
   text-decoration: none;
   color: inherit;

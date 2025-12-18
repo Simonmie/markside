@@ -3,7 +3,7 @@ import { isDev, port } from './utils/config.js'
 export const getManifest = () => {
   const m = {
     manifest_version: 3,
-    name: 'Vue Chrome Extension',
+    name: 'MarkSide',
     version: '0.0.0',
     icons: {
       16: 'dist/icons/logo-16.png',
@@ -12,7 +12,7 @@ export const getManifest = () => {
       128: 'dist/icons/logo-128.png',
     },
     action: {
-      default_popup: 'dist/src/popup/index.html',
+      // default_popup: 'dist/src/popup/index.html',
       default_icon: {
         16: 'dist/icons/logo-16.png',
         32: 'dist/icons/logo-32.png',
